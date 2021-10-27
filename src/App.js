@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import CreateNFT1 from "./pages/CreateNFT1";
+import CreatePage from "./pages/CreatePage";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         >
           <Switch>
             <Route path="/" exact>
-              <CreateNFT1 />
+              <CreatePage />
             </Route>
           </Switch>
         </div>

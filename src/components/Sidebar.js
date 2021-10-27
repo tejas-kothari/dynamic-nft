@@ -4,7 +4,7 @@ import { ReactComponent as PencilLogo } from "../assets/pencil.svg";
 export default function Sidebar() {
   return (
     <div
-      className="fixed flex flex-col bg-blue-600 rounded-r-xl w-16 top-20 pt-5"
+      className="fixed flex flex-col bg-blue-600 rounded-r-lg w-16 top-20 pt-5"
       style={{
         height: "calc(100vh - 3rem - 2 * 2rem)",
       }}
