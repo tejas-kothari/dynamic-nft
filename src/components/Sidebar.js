@@ -17,6 +17,7 @@ export default function Sidebar() {
         }}
       >
         <PencilLogo />
+        <p>Test message</p>
       </div>
       <div
         className="rounded-l-lg h-12 p-2 flex justify-center items-center"
