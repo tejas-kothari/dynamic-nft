@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .square {
+    /* @apply h-24 w-24 bg-blue-500 m-auto rounded-2xl; */
+    @apply relative w-1/2 inline-block;
+  }
+  .square:after {
+    @apply block;
+    content: "";
+    padding-bottom: 100%;
+  }
+
+  .content {
+    @apply rounded-2xl  border-2 border-indigo h-full bg-white shadow-indigo_sm;
+  }
+
+  .content:hover {
+    @apply bg-indigo shadow-indigo;
+  }
+
+  .square-content {
+    @apply absolute w-full h-full p-4;
+  }
+
+  .no-content {
+    @apply rounded-2xl bg-white bg-no-cover h-full;
+  }
+}
