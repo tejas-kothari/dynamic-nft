@@ -3,11 +3,21 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["SFProDisplay", "Helvetica"],
+      },
+      // fontWeight: {
+      //   light: "lighter",
+      // },
       colors: {
         indigo: {
           light: "#F1F1FF",
           DEFAULT: "#605BFF",
         },
+      },
+      stroke: {
+        current: "#605BFF",
+        hover: "#FFFFFF",
       },
       boxShadow: {
         indigo: "0 0 15px 0 #605BFF",

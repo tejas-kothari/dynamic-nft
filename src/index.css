@@ -1,8 +1,36 @@
+@font-face {
+  font-family: "SFProDisplay";
+  src: url(./assets/fonts/SF-Pro-Display-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url(./assets/fonts/SF-Pro-Display-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url(./assets/fonts/SF-Pro-Display-Medium.otf);
+  font-weight: 500;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
+  button {
+    @apply border bg-indigo text-white border-indigo px-6 py-1.5 rounded-lg my-2;
+  }
+
+  button:hover,
+  button:active,
+  button:focus {
+    @apply bg-white text-indigo;
+  }
+
   .square {
     /* @apply h-24 w-24 bg-blue-500 m-auto rounded-2xl; */
     @apply relative w-1/2 inline-block;
@@ -27,5 +55,15 @@
 
   .no-content {
     @apply rounded-2xl bg-white bg-no-cover h-full;
+  }
+  svg path {
+    @apply stroke-current;
+  }
+  .content:hover svg path {
+    @apply stroke-hover;
+  }
+
+  .table-row:first-of-type .table-cell {
+    @apply border-b border-indigo;
   }
 }

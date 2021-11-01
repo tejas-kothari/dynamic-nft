@@ -9,10 +9,7 @@ function App() {
       <div className="h-screen">
         <Header />
         <Sidebar />
-        <div
-          className="pl-14 mt-8"
-          style={{ height: "calc(100vh - 3rem - 2 * 2rem)" }}
-        >
+        <div className="pl-14 mt-8" style={{ height: "calc(100vh - 7rem )" }}>
           <Switch>
             <Route path="/" exact>
               <CreatePage />
