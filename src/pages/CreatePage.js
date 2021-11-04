@@ -1,9 +1,14 @@
 import { ReactComponent as DayNight } from "../assets/daynight.svg";
 import { ReactComponent as TwentyFour } from "../assets/24h.svg";
 import { ReactComponent as Plus } from "../assets/plus.svg";
+import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import cat from "../assets/images/cat.jpeg";
 
 export default function CreatePage() {
+  let history = useHistory();
+
   return (
     <div className="h-full flex flex-row ">
       <div className="bg-indigo-light w-96 rounded-r-lg p-8">
@@ -53,7 +58,7 @@ export default function CreatePage() {
         </div>
       </div>
       <div className="  max-w-screen-md m-auto h-full">
-        <div className="h-full flex flex-col items-end place-content-between w-10/12 m-auto">
+        <div className="h-full flex flex-col items-end justify-between w-10/12 m-auto">
           <div className="m-5 text-center font-light">
             <img src={cat} className="w-3/5 m-auto border-2 border-black" />
             <p className="mt-10">2K Widescreen</p>
@@ -103,7 +108,12 @@ export default function CreatePage() {
           </div>
 
           <div className="m-5 ">
-            <button className="self-end">Next</button>
+            <button
+              className="self-end"
+              onClick={() => history.push("/createdetails")}
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>

@@ -27,6 +27,9 @@ module.exports = {
         "no-cover":
           "url(\"data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23605BFFFF' stroke-width='1' stroke-dasharray='20%2c 20' stroke-dashoffset='22' stroke-linecap='square'/%3e%3c/svg%3e\")",
       },
+      minWidth: {
+        "10/12": "91.666667%",
+      },
     },
   },
   variants: {

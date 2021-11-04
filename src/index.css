@@ -21,6 +21,9 @@
 @tailwind utilities;
 
 @layer utilities {
+  html {
+    @apply font-sans;
+  }
   button {
     @apply border bg-white text-indigo border-indigo px-6 py-1.5 rounded-lg my-2;
   }
@@ -29,6 +32,30 @@
   button:active,
   button:focus {
     @apply bg-indigo text-white;
+  }
+
+  input,
+  textarea {
+    @apply border-indigo border rounded-lg p-2 text-indigo my-2;
+  }
+
+  input {
+    @apply h-8;
+  }
+
+  input:focus,
+  textarea:focus {
+    @apply border-none outline-none shadow-indigo_sm;
+  }
+
+  input,
+  textarea {
+    @apply text-indigo;
+  }
+
+  label,
+  legend {
+    @apply font-medium text-indigo;
   }
 
   .square {

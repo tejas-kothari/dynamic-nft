@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import CreatePage from "./pages/CreatePage";
+import CreateDetails from "./pages/CreateDetails";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <CreatePage />
+            </Route>
+            <Route path="/createdetails" exact>
+              <CreateDetails />
             </Route>
           </Switch>
         </div>
