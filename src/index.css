@@ -22,13 +22,13 @@
 
 @layer utilities {
   button {
-    @apply border bg-indigo text-white border-indigo px-6 py-1.5 rounded-lg my-2;
+    @apply border bg-white text-indigo border-indigo px-6 py-1.5 rounded-lg my-2;
   }
 
   button:hover,
   button:active,
   button:focus {
-    @apply bg-white text-indigo;
+    @apply bg-indigo text-white;
   }
 
   .square {
@@ -42,7 +42,7 @@
   }
 
   .content {
-    @apply rounded-2xl  border-2 border-indigo h-full bg-white shadow-indigo_sm;
+    @apply rounded-2xl  border-2 border-transparent h-full bg-white shadow-indigo_sm;
   }
 
   .content:hover {
