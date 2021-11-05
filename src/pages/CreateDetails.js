@@ -3,60 +3,46 @@ import { ReactComponent as TwentyFour } from "../assets/24h.svg";
 import { ReactComponent as Plus } from "../assets/plus.svg";
 import cat from "../assets/images/cat.jpeg";
 
+import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 export default function CreateDetails() {
+  let history = useHistory();
   return (
     <div className="h-full flex flex-row ">
       <div className="bg-indigo-light w-96 rounded-r-lg p-8">
-        <div className="square">
-          <div className="square-content">
-            <div className="p-5 content text-indigo hover:text-white text-center">
-              <DayNight className=" m-auto p-1.5" />
-              <p>Day / lala</p>
+        <div>
+          <p className="font-medium">Project Details</p>
+          <div className="flex items-center justify-between my-5 border border-black rounded-2xl p-2 bg-white">
+            <DayNight className="w-10 h-10 " />
+            <p className="text-indigo">Day / Night</p>
+          </div>
+          <div className="flex items-center justify-between my-5 border border-black rounded-2xl p-2 bg-white">
+            <img src={cat} className="border border-black w-20 " />
+            <div className="text-indigo">
+              <p>2K Widescreen</p>
+              <p className="font-light">1920 x 1080 px</p>
             </div>
           </div>
-        </div>
 
-        <div className="square">
-          <div className="square-content">
-            <div className="p-5 content text-indigo hover:text-white text-center">
-              <TwentyFour className=" m-auto p-1.5" />
-              <p>24 Hours</p>
+          <div className="rounded-2xl p-2 bg-white text-indigo my-5 border border-black">
+            <div className="flex items-center justify-between my-1 ">
+              <p className="font-light">Cat.jpeg</p>
+              <p>Day</p>
             </div>
-          </div>
-        </div>
-
-        <div className="square">
-          <div className="square-content">
-            <div className="p-5 content text-indigo hover:text-white text-center">
-              <Plus className=" m-auto p-1.5" />
-              <p>Custom</p>
+            <hr className="my-2 border-indigo" />
+            <div className="flex items-center justify-between my-1 ">
+              <p className="font-light">Cat-night.jpeg</p>
+              <p>Night</p>
             </div>
-          </div>
-        </div>
-
-        <div className="square">
-          <div className="square-content">
-            <div className=" no-content"></div>
-          </div>
-        </div>
-
-        <div className="square">
-          <div className="square-content">
-            <div className=" no-content"></div>
-          </div>
-        </div>
-
-        <div className="square">
-          <div className="square-content">
-            <div className=" no-content"></div>
           </div>
         </div>
       </div>
       <div
-        className="  max-w-screen-md m-auto h-full w-10/12"
+        className="h-full  max-w-screen-md m-auto  w-10/12 flex flex-col justify-between"
         style={{ maxWidth: "566px" }}
       >
-        <div className="h-full flex flex-col items-end justify-between  m-auto">
+        <div className=" flex flex-col  items-end justify-between  m-5">
           <form className="self-start w-full">
             <p className="w-full">
               <label for="title">Title</label>
@@ -198,9 +184,15 @@ export default function CreateDetails() {
               </div>
             </fieldset>
           </form>
-
-          <div className="m-5 ">
-            <button className="self-end">Next</button>
+        </div>
+        <div className="flex  flex-row justify-between w-full m-5 mb-0">
+          <div className="m-5 ml-0 ">
+            <button className="self-start" onClick={() => history.push("/")}>
+              Back
+            </button>
+          </div>
+          <div className="m-5 mr-0 ">
+            <button className="self-end ">Next</button>
           </div>
         </div>
       </div>
